@@ -4,59 +4,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRIIT Learning Management System | About Us</title>
     <link rel="stylesheet" href="css/style.css">
-
-    <title>About Page</title>
 </head>
 
 <body>
-    <header>
-        <h1>About NRIIT Learning Management</h1>
-        <p>Learn Practice Get Placed</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="courses.html">Courses</a>
-            <a href="trainers.html">Trainers</a>
-            <a href="register.html">Register</a>
-            <a href="login.html">Login</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <!-- Top Announcement & Contact Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-info">
+                <span><i class="fa-solid fa-graduation-cap"></i> NRI Institute of Technology - Approved by AICTE</span>
+                <span><i class="fa-solid fa-envelope"></i> info@nriit.edu</span>
+                <span><i class="fa-solid fa-phone"></i> +91 9876543210</span>
+            </div>
+            <div class="top-links">
+                <a href="login.html"><i class="fa-solid fa-user-lock"></i> Student Portal</a>
+                <span>|</span>
+                <a href="contact.html"><i class="fa-solid fa-location-dot"></i> Agiripalli Campus</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header">
+        <div class="navbar-container">
+            <a href="index.html" class="brand-logo">
+                <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo">
+                <div class="brand-text">
+                    <span class="brand-title">NRIIT LMS</span>
+                    <span class="brand-subtitle">Learning Portal</span>
+                </div>
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="about.html" class="active"><i class="fa-solid fa-circle-info"></i> About</a>
+                <a href="courses.html"><i class="fa-solid fa-book-open"></i> Courses</a>
+                <a href="trainers.html"><i class="fa-solid fa-chalkboard-user"></i> Trainers</a>
+                <a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact</a>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn-nav-login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                    <a href="register.html" class="btn-nav-register"><i class="fa-solid fa-user-plus"></i> Register</a>
+                </div>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>About NRIIT</h2>
-            <p>
-                NRIIT is committed to providing quality education in Python FullStack.
-            </p>
+
+    <!-- Page Header Banner -->
+    <div class="page-header">
+        <div class="container">
+            <h1>About NRIIT Learning Portal</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>About Us</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- Overview Section -->
+        <section class="hero-grid" style="align-items: center; margin-bottom: 40px;">
+            <div>
+                <span class="section-subtitle">Who We Are</span>
+                <h2 class="section-title">Dedicated to Excellence in Technical Education</h2>
+                <p class="section-desc" style="margin-bottom: 16px;">
+                    NRI Institute of Technology (NRIIT) is committed to providing world-class, industry-aligned education in Python FullStack Engineering and Web Technologies.
+                </p>
+                <p style="color: var(--text-body); font-size: 0.98rem; line-height: 1.7;">
+                    Our LMS portal bridges academia and industry expectations by giving engineering students continuous access to hands-on coding exercises, real-time feedback, interactive modules, and direct mentorship from experienced trainers.
+                </p>
+            </div>
+            <div class="contact-card" style="text-align: center; background: var(--bg-light); border: 1px solid var(--border-color);">
+                <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo" style="max-height: 120px; margin: 0 auto 20px; background: white; padding: 10px; border-radius: 12px;">
+                <h3 style="color: var(--navy-header); font-size: 1.25rem; font-weight: 700;">NRI Institute of Technology</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0;">Pothavarappadu, Agiripalli, Eluru District, Andhra Pradesh</p>
+            </div>
         </section>
+
+        <!-- Vision & Mission Cards -->
+        <section style="margin-bottom: 40px;">
+            <div class="features-grid">
+                <div class="feature-card" style="background: var(--navy-header); color: var(--white);">
+                    <div class="feature-icon" style="background: rgba(255,255,255,0.1); color: var(--accent-gold);">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 style="color: var(--white);">Our Vision</h3>
+                    <p style="color: #cbd5e1;">Empowering students with practical software development skills, critical thinking, and industry-ready capabilities to excel in the global IT ecosystem.</p>
+                </div>
+
+                <div class="feature-card" style="background: var(--primary); color: var(--white);">
+                    <div class="feature-icon" style="background: rgba(255,255,255,0.15); color: var(--white);">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 style="color: var(--white);">Our Mission</h3>
+                    <p style="color: #f1f5f9;">To deliver rigorous project-based learning, foster innovation through modern full-stack technologies, and ensure 100% placement support for aspiring engineers.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values Section -->
         <section>
-            <h2>Vision</h2>
-            <p>
-                Empowering Students with Practical Software Skills
-            </p>
+            <div class="section-title-wrap">
+                <span class="section-subtitle">Our Principles</span>
+                <h2 class="section-title">Core Institutional Values</h2>
+                <p class="section-desc">The pillars that define our educational philosophy and student success framework.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3>Academic Excellence</h3>
+                    <p>Maintaining high standards of course delivery, coding practices, and continuous evaluation.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-code-commit"></i>
+                    </div>
+                    <h3>Practical Orientation</h3>
+                    <p>Focusing on hands-on project building rather than pure theoretical knowledge.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h3>Career Support</h3>
+                    <p>Dedicated assistance for every student from resume creation to final interview clearance.</p>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
 
-        <hr>
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 style="display: flex; align-items: center; gap: 8px;">
+                        <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo" style="height: 30px; background: white; padding: 2px 4px; border-radius: 4px;">
+                        NRIIT LMS Portal
+                    </h4>
+                    <p>NRI Institute of Technology is dedicated to delivering high quality technical education, hands-on programming bootcamps, and career placement services.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
 
-        <p>&copy; 2026 NRIIT Learning Management System</p>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About NRIIT</a></li>
+                        <li><a href="courses.html"><i class="fa-solid fa-chevron-right"></i> Courses Offered</a></li>
+                        <li><a href="trainers.html"><i class="fa-solid fa-chevron-right"></i> Faculty & Trainers</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
 
-        <p>Email: info@nriit.edu</p>
+                <div class="footer-col">
+                    <h4>Student Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="login.html"><i class="fa-solid fa-chevron-right"></i> LMS Student Login</a></li>
+                        <li><a href="register.html"><i class="fa-solid fa-chevron-right"></i> New Registration</a></li>
+                        <li><a href="courses.html"><i class="fa-solid fa-chevron-right"></i> Placement Assistance</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Campus Tour</a></li>
+                    </ul>
+                </div>
 
-        <p>Phone: +91 9876543210</p>
+                <div class="footer-col">
+                    <h4>Campus Info</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>NRI Institute of Technology, Pothavarappadu, Agiripalli, Eluru District, Andhra Pradesh.</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@nriit.edu</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 9876543210</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <p>Follow Us:</p>
-
-        <a href="#">Facebook</a> |
-
-        <a href="#">Instagram</a> |
-
-        <a href="#">LinkedIn</a>
-
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 NRIIT Learning Management System. All Rights Reserved.</p>
+                <p>Designed with <i class="fa-solid fa-heart" style="color: #ef4444;"></i> for NRIIT Students</p>
+            </div>
+        </div>
     </footer>
 
+    <script>
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('show');
+        });
+    </script>
 </body>
 
 </html>

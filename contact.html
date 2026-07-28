@@ -4,104 +4,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Page</title>
+    <title>NRIIT Learning Management System | Contact Us</title>
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
-    <header>
-        Home <br>
-        <h1>Contact NRIIT Learning Management</h1>
-        <p>Learn Practice Get Placed</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="courses.html">Courses</a>
-            <a href="trainers.html">Trainers</a>
-            <a href="register.html">Register</a>
-            <a href="login.html">Login</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <!-- Top Announcement & Contact Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-info">
+                <span><i class="fa-solid fa-graduation-cap"></i> NRI Institute of Technology - Approved by AICTE</span>
+                <span><i class="fa-solid fa-envelope"></i> info@nriit.edu</span>
+                <span><i class="fa-solid fa-phone"></i> +91 9876543210</span>
+            </div>
+            <div class="top-links">
+                <a href="login.html"><i class="fa-solid fa-user-lock"></i> Student Portal</a>
+                <span>|</span>
+                <a href="contact.html"><i class="fa-solid fa-location-dot"></i> Agiripalli Campus</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header">
+        <div class="navbar-container">
+            <a href="index.html" class="brand-logo">
+                <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo">
+                <div class="brand-text">
+                    <span class="brand-title">NRIIT LMS</span>
+                    <span class="brand-subtitle">Learning Portal</span>
+                </div>
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+                <a href="courses.html"><i class="fa-solid fa-book-open"></i> Courses</a>
+                <a href="trainers.html"><i class="fa-solid fa-chalkboard-user"></i> Trainers</a>
+                <a href="contact.html" class="active"><i class="fa-solid fa-address-book"></i> Contact</a>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn-nav-login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                    <a href="register.html" class="btn-nav-register"><i class="fa-solid fa-user-plus"></i> Register</a>
+                </div>
+            </nav>
+        </div>
     </header>
-    <main>
 
-        <section>
+    <!-- Page Header Banner -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Contact</span>
+            </div>
+        </div>
+    </div>
 
-            <h2>Contact Us</h2>
+    <main class="container">
+        <!-- Contact Grid & Form -->
+        <section class="contact-grid">
+            <div class="contact-card">
+                <h3 style="color: var(--navy-header); font-size: 1.35rem; font-weight: 700; margin-bottom: 20px;">Get In Touch</h3>
+                <div class="contact-info-list">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h4>Campus Address</h4>
+                            <p>NRI Institute of Technology, Pothavarappadu, Agiripalli Mandal, Eluru District, Vijayawada Rural, Andhra Pradesh - 521212</p>
+                        </div>
+                    </div>
 
-            <p>NRI Institute of Information Technology</p>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h4>Email Admissions & Support</h4>
+                            <p>info@nriit.edu | admissions@nriit.edu</p>
+                        </div>
+                    </div>
 
-            <p>Agiripalli, Andhra Pradesh</p>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h4>Phone & Toll Free</h4>
+                            <p>+91 9876543210 / 0866-2469666</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <p>Email: info@nriit.edu</p>
+            <!-- Inquiry Form -->
+            <div class="contact-card">
+                <h3 style="color: var(--navy-header); font-size: 1.35rem; font-weight: 700; margin-bottom: 20px;">Send Us an Inquiry</h3>
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent successfully.');">
+                    <div class="form-group">
+                        <label for="contactName">Your Full Name</label>
+                        <input type="text" id="contactName" class="form-control" placeholder="e.g. John Doe" required>
+                    </div>
 
-            <p>Phone: +91 9876543210</p>
+                    <div class="form-group">
+                        <label for="contactEmail">Email Address</label>
+                        <input type="email" id="contactEmail" class="form-control" placeholder="name@domain.com" required>
+                    </div>
 
+                    <div class="form-group">
+                        <label for="contactMessage">Message / Question</label>
+                        <textarea id="contactMessage" class="form-control" rows="4" placeholder="How can we assist you with NRIIT courses?" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                </form>
+            </div>
         </section>
-        <section>
 
-            <h2>Institute Audio</h2>
+        <!-- Media & Audio Showcase -->
+        <section class="hero-grid" style="gap: 30px; margin-bottom: 40px;">
+            <div class="media-card">
+                <h3><i class="fa-solid fa-circle-play"></i> Institute Audio Welcome</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">Listen to the introductory welcome message from NRIIT Academic Desk.</p>
+                <audio controls style="width: 100%; border-radius: 8px;">
+                    <source src="audio/intro.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
 
-            <audio controls>
-
-                <source src="audio/intro.mp3" type="audio/mpeg">
-
-            </audio>
-
-        </section>
-        <section>
-
-            <h2>Campus Tour</h2>
-
-            <video width="500" controls>
-
-                <source src="video/intro.mp4" type="video/mp4">
-
-            </video>
-
-        </section>
-        <section>
-
-            <h2>Python Introduction</h2>
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/rfscVS0vtbw" title="YouTube video"
-                allowfullscreen>
-
-            </iframe>
-
-        </section>
-        <section>
-
-            <h2>Locate Us</h2>
-
-            <iframe src="https://www.google.com/maps?q=Agiripalli&output=embed" width="600" height="350">
-
-            </iframe>
-
+            <div class="media-card">
+                <h3><i class="fa-brands fa-youtube"></i> Python Introduction Showcase</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">Watch the Python FullStack introductory bootcamp lecture.</p>
+                <div class="responsive-video">
+                    <iframe src="https://www.youtube.com/embed/rfscVS0vtbw" title="Python Introduction Video" allowfullscreen></iframe>
+                </div>
+            </div>
         </section>
 
+        <!-- Google Map Section -->
+        <section>
+            <div class="section-title-wrap" style="margin-bottom: 24px;">
+                <span class="section-subtitle">Campus Navigation</span>
+                <h2 class="section-title">Locate NRIIT Campus</h2>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps?q=Agiripalli&output=embed" loading="lazy" title="NRIIT Campus Map"></iframe>
+            </div>
+        </section>
     </main>
-    <footer>
 
-        <hr>
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 style="display: flex; align-items: center; gap: 8px;">
+                        <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo" style="height: 30px; background: white; padding: 2px 4px; border-radius: 4px;">
+                        NRIIT LMS Portal
+                    </h4>
+                    <p>NRI Institute of Technology is dedicated to delivering high quality technical education, hands-on programming bootcamps, and career placement services.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
 
-        <p>&copy; 2026 NRIIT Learning Management System</p>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About NRIIT</a></li>
+                        <li><a href="courses.html"><i class="fa-solid fa-chevron-right"></i> Courses Offered</a></li>
+                        <li><a href="trainers.html"><i class="fa-solid fa-chevron-right"></i> Faculty & Trainers</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
 
-        <p>Email: info@nriit.edu</p>
+                <div class="footer-col">
+                    <h4>Student Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="login.html"><i class="fa-solid fa-chevron-right"></i> LMS Student Login</a></li>
+                        <li><a href="register.html"><i class="fa-solid fa-chevron-right"></i> New Registration</a></li>
+                        <li><a href="courses.html"><i class="fa-solid fa-chevron-right"></i> Placement Assistance</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Campus Tour</a></li>
+                    </ul>
+                </div>
 
-        <p>Phone: +91 9876543210</p>
+                <div class="footer-col">
+                    <h4>Campus Info</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>NRI Institute of Technology, Pothavarappadu, Agiripalli, Eluru District, Andhra Pradesh.</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@nriit.edu</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 9876543210</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <p>Follow Us:</p>
-
-        <a href="#">Facebook</a> |
-
-        <a href="#">Instagram</a> |
-
-        <a href="#">LinkedIn</a>
-
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 NRIIT Learning Management System. All Rights Reserved.</p>
+                <p>Designed with <i class="fa-solid fa-heart" style="color: #ef4444;"></i> for NRIIT Students</p>
+            </div>
+        </div>
     </footer>
 
+    <script>
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('show');
+        });
+    </script>
 </body>
 
 </html>

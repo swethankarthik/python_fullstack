@@ -1,75 +1,282 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRIIT Learning Management System | Home</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Home</title>
 </head>
 
 <body>
-    <header>
-        Home <br />
-        <h1>NRIIT Learning Management</h1>
-        <p>Learn Practice Get Placed</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="courses.html">Courses</a>
-            <a href="trainers.html">Trainers</a>
-            <a href="register.html">Register</a>
-            <a href="login.html">Login</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <!-- Top Announcement & Contact Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-info">
+                <span><i class="fa-solid fa-graduation-cap"></i> NRI Institute of Technology - Approved by AICTE</span>
+                <span><i class="fa-solid fa-envelope"></i> info@nriit.edu</span>
+                <span><i class="fa-solid fa-phone"></i> +91 9876543210</span>
+            </div>
+            <div class="top-links">
+                <a href="login.html"><i class="fa-solid fa-user-lock"></i> Student Portal</a>
+                <span>|</span>
+                <a href="contact.html"><i class="fa-solid fa-location-dot"></i> Agiripalli Campus</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header">
+        <div class="navbar-container">
+            <a href="index.html" class="brand-logo">
+                <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo">
+                <div class="brand-text">
+                    <span class="brand-title">NRIIT LMS</span>
+                    <span class="brand-subtitle">Learning Portal</span>
+                </div>
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+                <a href="courses.html"><i class="fa-solid fa-book-open"></i> Courses</a>
+                <a href="trainers.html"><i class="fa-solid fa-chalkboard-user"></i> Trainers</a>
+                <a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact</a>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn-nav-login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                    <a href="register.html" class="btn-nav-register"><i class="fa-solid fa-user-plus"></i> Register</a>
+                </div>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <section>
-            <h2>Welcome to NRIIT Learning Management System</h2>
-            <p>
-                The NRIIT Management System helpsstudents explore courses, resgister online, learn from experienced
-                trainers and
-                track their learning journey.
-            </p>
-            <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="LMS Banner"
-                width="500" class="banner">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="tag" style="background: rgba(4, 107, 210, 0.2); color: #38bdf8; font-size: 0.85rem; padding: 6px 14px; margin-bottom: 16px; display: inline-block;">
+                        <i class="fa-solid fa-bolt"></i> Learn • Practice • Get Placed
+                    </span>
+                    <h1>Empowering Next-Gen <span>Python FullStack</span> Developers</h1>
+                    <p>
+                        Master modern Web Technologies, Flask, REST APIs, SQL, and DevOps workflows under expert guidance. Get hands-on industry experience and placement assistance at NRIIT.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="courses.html" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Explore Courses</a>
+                        <a href="register.html" class="btn btn-outline-hero"><i class="fa-solid fa-pen-to-square"></i> Apply Online</a>
+                    </div>
+                </div>
+                <div class="hero-card-preview">
+                    <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT LMS System">
+                    <h3 style="color: #ffffff; font-size: 1.3rem; margin-bottom: 8px;">NRIIT Placement & LMS Portal</h3>
+                    <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0;">Interactive online learning, real-time code reviews, and direct interview scheduling with 100+ hiring partners.</p>
+                </div>
+            </div>
         </section>
-        <section>
-            <h2>Why choose NRIIT?</h2>
-            <ul>
-                <li>Experienced Trainers</li>
-                <li>Industry Projects</li>
-                <li>Placement Assistance</li>
-            </ul>
+
+        <!-- Why Choose NRIIT Section -->
+        <section class="container">
+            <div class="section-title-wrap">
+                <span class="section-subtitle">Excellence in Education</span>
+                <h2 class="section-title">Why Choose NRIIT Learning Portal?</h2>
+                <p class="section-desc">Our industry-aligned curriculum equips students with practical engineering skills required by top technology companies.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Experienced Trainers</h3>
+                    <p>Learn directly from industry veterans with over 5+ years of software architecture and development experience.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3>Live Industry Projects</h3>
+                    <p>Build enterprise-level full-stack applications with databases, authentication, and cloud deployment pipelines.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3>Placement Assistance</h3>
+                    <p>Dedicated career guidance cell offering resume building, mock interviews, and referral drives with corporate partners.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h3>Recognized Certification</h3>
+                    <p>Earn an accredited full-stack developer certification validated by NRIIT and industry academic councils.</p>
+                </div>
+            </div>
         </section>
-        <section>
-            <h2>Popular Courses</h2>
-            <article>
-                <h3>Python FullStack</h3>
-                <p>Learn HTML, CSS, JavScript,SQL and Flask</p>
-            </article>
+
+        <!-- Popular Courses Section -->
+        <section class="container" style="background-color: var(--bg-light); border-radius: var(--radius-lg); padding: 50px 30px; margin-top: 20px;">
+            <div class="section-title-wrap">
+                <span class="section-subtitle">Featured Programs</span>
+                <h2 class="section-title">Popular FullStack Courses</h2>
+                <p class="section-desc">Comprehensive technology tracks designed to turn beginners into job-ready software engineers.</p>
+            </div>
+
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-badge-wrap">
+                        <span class="course-category-badge">Flagship Course</span>
+                        <h3>Python FullStack Development</h3>
+                        <div class="course-meta-top">
+                            <span><i class="fa-regular fa-clock"></i> 6 Months</span>
+                            <span><i class="fa-solid fa-user-graduate"></i> Beginner to Advanced</span>
+                        </div>
+                    </div>
+                    <div class="course-body">
+                        <p>Master Python programming, HTML5, CSS3, JavaScript ES6+, SQL relational databases, Flask framework, and Git version control.</p>
+                        <div class="course-tags">
+                            <span class="tag">HTML5 & CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <div class="course-footer">
+                            <span class="course-price">Offline & Online</span>
+                            <a href="courses.html" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;"><i class="fa-solid fa-arrow-right"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-badge-wrap" style="background: linear-gradient(135deg, #1e293b 0%, #046bd2 100%);">
+                        <span class="course-category-badge" style="background: #10b981;">Trending Track</span>
+                        <h3>Frontend Web Architecture</h3>
+                        <div class="course-meta-top">
+                            <span><i class="fa-regular fa-clock"></i> 3 Months</span>
+                            <span><i class="fa-solid fa-user-graduate"></i> Intermediate</span>
+                        </div>
+                    </div>
+                    <div class="course-body">
+                        <p>Deep dive into modern responsive layouts, UI/UX principles, JavaScript DOM manipulation, component design, and API integration.</p>
+                        <div class="course-tags">
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">Flexbox & Grid</span>
+                            <span class="tag">DOM API</span>
+                            <span class="tag">REST JSON</span>
+                        </div>
+                        <div class="course-footer">
+                            <span class="course-price">Offline</span>
+                            <a href="courses.html" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;"><i class="fa-solid fa-arrow-right"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <!-- Stats Counter Section -->
+        <div class="container">
+            <div class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>5000+</h3>
+                        <p>Students Trained</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>98%</h3>
+                        <p>Placement Success</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100+</h3>
+                        <p>Hiring Partners</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>15+</h3>
+                        <p>Live Projects Built</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer>
 
-        <hr>
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 style="display: flex; align-items: center; gap: 8px;">
+                        <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo" style="height: 30px; background: white; padding: 2px 4px; border-radius: 4px;">
+                        NRIIT LMS Portal
+                    </h4>
+                    <p>NRI Institute of Technology is dedicated to delivering high quality technical education, hands-on programming bootcamps, and career placement services.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
 
-        <p>&copy; 2026 NRIIT Learning Management System</p>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About NRIIT</a></li>
+                        <li><a href="courses.html"><i class="fa-solid fa-chevron-right"></i> Courses Offered</a></li>
+                        <li><a href="trainers.html"><i class="fa-solid fa-chevron-right"></i> Faculty & Trainers</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
 
-        <p>Email: info@nriit.edu</p>
+                <div class="footer-col">
+                    <h4>Student Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="login.html"><i class="fa-solid fa-chevron-right"></i> LMS Student Login</a></li>
+                        <li><a href="register.html"><i class="fa-solid fa-chevron-right"></i> New Registration</a></li>
+                        <li><a href="courses.html"><i class="fa-solid fa-chevron-right"></i> Placement Assistance</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Campus Tour</a></li>
+                    </ul>
+                </div>
 
-        <p>Phone: +91 9876543210</p>
+                <div class="footer-col">
+                    <h4>Campus Info</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>NRI Institute of Technology, Pothavarappadu, Agiripalli, Eluru District, Andhra Pradesh.</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@nriit.edu</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 9876543210</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <p>Follow Us:</p>
-
-        <a href="#">Facebook</a> |
-
-        <a href="#">Instagram</a> |
-
-        <a href="#">LinkedIn</a>
-
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 NRIIT Learning Management System. All Rights Reserved.</p>
+                <p>Designed with <i class="fa-solid fa-heart" style="color: #ef4444;"></i> for NRIIT Students</p>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('show');
+        });
+    </script>
 </body>
 
 </html>

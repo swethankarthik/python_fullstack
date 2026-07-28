@@ -4,38 +4,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRIIT Learning Management System | Student Registration</title>
     <link rel="stylesheet" href="css/style.css">
-
-    <title>Register page</title>
 </head>
 
 <body>
-    <header>Register</header>
-    <main>
-        <h2>Student Registration </h2>
-        <form>
-            <label>Full Name</label><br>
-            <input type="text" placeholder="Enter Your Name"><br>
-            <label>Email</label><br>
-            <input type="email" placeholder="Enter your email"><br>
-            <label>Password</label><br>
-            <input type="password" placeholder="Enter Your Password"><br>
-            <label>Date of Birth</label><br>
-            <input type="date" placeholder="DOB"><br>
-            <label>Gender</label><br>
-            <input type="radio" name="gender">Male
-            <input type="radio" name="gender">Female <br><br>
-            <label>Select Course</label>
-            <br>
-            <select>
-                <option>Python FullStack</option>
-                <option>Java FullStack</option>
-            </select>
-            <br>
-            <input type="submit" value="Register">
-        </form>
+    <!-- Top Announcement & Contact Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-info">
+                <span><i class="fa-solid fa-graduation-cap"></i> NRI Institute of Technology - Approved by AICTE</span>
+                <span><i class="fa-solid fa-envelope"></i> info@nriit.edu</span>
+                <span><i class="fa-solid fa-phone"></i> +91 9876543210</span>
+            </div>
+            <div class="top-links">
+                <a href="login.html"><i class="fa-solid fa-user-lock"></i> Student Portal</a>
+                <span>|</span>
+                <a href="contact.html"><i class="fa-solid fa-location-dot"></i> Agiripalli Campus</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header">
+        <div class="navbar-container">
+            <a href="index.html" class="brand-logo">
+                <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo">
+                <div class="brand-text">
+                    <span class="brand-title">NRIIT LMS</span>
+                    <span class="brand-subtitle">Learning Portal</span>
+                </div>
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+                <a href="courses.html"><i class="fa-solid fa-book-open"></i> Courses</a>
+                <a href="trainers.html"><i class="fa-solid fa-chalkboard-user"></i> Trainers</a>
+                <a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact</a>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn-nav-login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                    <a href="register.html" class="btn-nav-register active"><i class="fa-solid fa-user-plus"></i> Register</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="auth-wrapper">
+        <div class="auth-card wide">
+            <div class="auth-header">
+                <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo" style="max-height: 60px; margin: 0 auto 16px;">
+                <h2>Student Online Registration</h2>
+                <p>Fill out the form below to enroll in NRIIT FullStack software training tracks</p>
+            </div>
+
+            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Registration successful! Check your email for login credentials.');">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName"><i class="fa-solid fa-user"></i> Full Name</label>
+                        <input type="text" id="fullName" class="form-control" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regEmail"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                        <input type="email" id="regEmail" class="form-control" placeholder="name@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="regPassword"><i class="fa-solid fa-lock"></i> Password</label>
+                        <input type="password" id="regPassword" class="form-control" placeholder="Create strong password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob"><i class="fa-regular fa-calendar"></i> Date of Birth</label>
+                        <input type="date" id="dob" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-venus-mars"></i> Gender</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="Male" checked> Male
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="Female"> Female
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="Other"> Other
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="courseSelect"><i class="fa-solid fa-graduation-cap"></i> Select Course Track</label>
+                        <select id="courseSelect" class="form-control" required>
+                            <option value="">-- Choose a Course Track --</option>
+                            <option value="Python FullStack">Python FullStack Engineering (6 Months)</option>
+                            <option value="Frontend Web Architecture">Frontend Web Architecture (3 Months)</option>
+                            <option value="Database & Flask APIs">Database & Flask APIs (2.5 Months)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="radio-label" style="font-size: 0.85rem;">
+                        <input type="checkbox" required> I agree to NRIIT Academic Terms and Privacy Policy
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-user-check"></i> Complete Registration</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html" style="font-weight: 600;">Sign In here</a></p>
+            </div>
+        </div>
     </main>
 
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 style="display: flex; align-items: center; gap: 8px;">
+                        <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo" style="height: 30px; background: white; padding: 2px 4px; border-radius: 4px;">
+                        NRIIT LMS Portal
+                    </h4>
+                    <p>NRI Institute of Technology is dedicated to delivering high quality technical education, hands-on programming bootcamps, and career placement services.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About NRIIT</a></li>
+                        <li><a href="courses.html"><i class="fa-solid fa-chevron-right"></i> Courses Offered</a></li>
+                        <li><a href="trainers.html"><i class="fa-solid fa-chevron-right"></i> Faculty & Trainers</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Student Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="login.html"><i class="fa-solid fa-chevron-right"></i> LMS Student Login</a></li>
+                        <li><a href="register.html"><i class="fa-solid fa-chevron-right"></i> New Registration</a></li>
+                        <li><a href="courses.html"><i class="fa-solid fa-chevron-right"></i> Placement Assistance</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Campus Tour</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Campus Info</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>NRI Institute of Technology, Pothavarappadu, Agiripalli, Eluru District, Andhra Pradesh.</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@nriit.edu</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 9876543210</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 NRIIT Learning Management System. All Rights Reserved.</p>
+                <p>Designed with <i class="fa-solid fa-heart" style="color: #ef4444;"></i> for NRIIT Students</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('show');
+        });
+    </script>
 </body>
 
 </html>
