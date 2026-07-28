@@ -4,35 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NRIIT Learning Management System | Courses Offered</title>
+    <title>NRIIT LMS | Courses Offered & Fee Estimator</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
-    <!-- Top Announcement & Contact Bar -->
-    <div class="top-bar">
+    <!-- Top Announcement Ticker Bar -->
+    <div class="top-ticker-bar">
         <div class="container">
-            <div class="top-info">
-                <span><i class="fa-solid fa-graduation-cap"></i> NRI Institute of Technology - Approved by AICTE</span>
-                <span><i class="fa-solid fa-envelope"></i> info@nriit.edu</span>
-                <span><i class="fa-solid fa-phone"></i> +91 9876543210</span>
+            <div class="ticker-items">
+                <span class="ticker-item"><i class="fa-solid fa-award"></i> NAAC A+ Accredited Campus</span>
+                <span class="ticker-item"><i class="fa-solid fa-graduation-cap"></i> AICTE Approved Programs</span>
+                <span class="ticker-item"><i class="fa-solid fa-bolt"></i> 2026 Batch Admissions Open</span>
             </div>
-            <div class="top-links">
+            <div class="top-portal-links">
                 <a href="login.html"><i class="fa-solid fa-user-lock"></i> Student Portal</a>
-                <span>|</span>
                 <a href="contact.html"><i class="fa-solid fa-location-dot"></i> Agiripalli Campus</a>
             </div>
         </div>
     </div>
 
-    <!-- Main Navigation Header -->
+    <!-- Navigation Header -->
     <header class="main-header">
         <div class="navbar-container">
             <a href="index.html" class="brand-logo">
                 <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo">
                 <div class="brand-text">
                     <span class="brand-title">NRIIT LMS</span>
-                    <span class="brand-subtitle">Learning Portal</span>
+                    <span class="brand-subtitle">LEARNING PORTAL</span>
                 </div>
             </a>
 
@@ -47,17 +47,20 @@
                 <a href="trainers.html"><i class="fa-solid fa-chalkboard-user"></i> Trainers</a>
                 <a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact</a>
                 <div class="nav-actions">
-                    <a href="login.html" class="btn-nav-login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
-                    <a href="register.html" class="btn-nav-register"><i class="fa-solid fa-user-plus"></i> Register</a>
+                    <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <a href="login.html" class="btn-nav-login">Login</a>
+                    <a href="register.html" class="btn-nav-register">Register</a>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- Page Header Banner -->
+    <!-- Page Subheader Banner -->
     <div class="page-header">
         <div class="container">
-            <h1>Courses Offered</h1>
+            <h1>Courses & Fee Estimator</h1>
             <div class="breadcrumb">
                 <a href="index.html">Home</a>
                 <i class="fa-solid fa-chevron-right"></i>
@@ -67,12 +70,20 @@
     </div>
 
     <main class="container">
-        <!-- Courses Table Section -->
+        <!-- Search & Courses Table -->
         <section>
             <div class="section-title-wrap">
-                <span class="section-subtitle">Academic Curriculum</span>
-                <h2 class="section-title">Course Overview & Schedules</h2>
-                <p class="section-desc">Review available course tracks, durations, training modes, and prerequisites.</p>
+                <span class="section-subtitle">Curriculum Directory</span>
+                <h2 class="section-title">Available Training Programs</h2>
+                <p class="section-desc">Review available training tracks, durations, and entry prerequisites.</p>
+            </div>
+
+            <!-- Instant Search Box -->
+            <div style="max-width: 500px; margin: 0 auto 28px;">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="courseSearchInput" class="form-control" placeholder="Search programs by keyword (e.g. Python, Flask, SQL)...">
+                </div>
             </div>
 
             <div class="table-responsive">
@@ -83,44 +94,47 @@
                             <th><i class="fa-regular fa-clock"></i> Duration</th>
                             <th><i class="fa-solid fa-laptop-house"></i> Training Mode</th>
                             <th><i class="fa-solid fa-list-check"></i> Prerequisites</th>
-                            <th><i class="fa-solid fa-gear"></i> Status & Enrollment</th>
+                            <th><i class="fa-solid fa-gear"></i> Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>
                                 <strong>Python FullStack Engineering</strong><br>
-                                <small style="color: var(--text-muted);">Comprehensive Frontend + Backend + Database Track</small>
+                                <small style="color: var(--muted-text);">Frontend, Backend & Relational Databases</small>
                             </td>
                             <td>6 Months</td>
-                            <td><span class="badge-status badge-offline">Offline & Hybrid</span></td>
+                            <td><span class="badge-status badge-online">Offline & Hybrid</span></td>
                             <td>Basic Computer Concepts</td>
-                            <td>
-                                <a href="register.html" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.85rem;"><i class="fa-solid fa-pen"></i> Register Now</a>
+                            <td style="display: flex; gap: 8px; align-items: center;">
+                                <a href="register.html" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.825rem;"><i class="fa-solid fa-pen"></i> Register</a>
+                                <button onclick="downloadSyllabus('Python FullStack')" class="btn btn-outline-hero" style="padding: 6px 12px; font-size: 0.825rem;" title="Download PDF Syllabus"><i class="fa-solid fa-file-pdf"></i> PDF</button>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <strong>Frontend Web Architecture</strong><br>
-                                <small style="color: var(--text-muted);">HTML, CSS3, JS ES6+, UI UX Design</small>
+                                <small style="color: var(--muted-text);">HTML5, CSS3, JS ES6+, UI UX Design</small>
                             </td>
                             <td>3 Months</td>
                             <td><span class="badge-status badge-online">Online Live</span></td>
                             <td>None</td>
-                            <td>
-                                <a href="register.html" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.85rem;"><i class="fa-solid fa-pen"></i> Register Now</a>
+                            <td style="display: flex; gap: 8px; align-items: center;">
+                                <a href="register.html" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.825rem;"><i class="fa-solid fa-pen"></i> Register</a>
+                                <button onclick="downloadSyllabus('Frontend Web Architecture')" class="btn btn-outline-hero" style="padding: 6px 12px; font-size: 0.825rem;" title="Download PDF Syllabus"><i class="fa-solid fa-file-pdf"></i> PDF</button>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <strong>Database Management & Flask APIs</strong><br>
-                                <small style="color: var(--text-muted);">SQL Queries, ORM, RESTful Endpoints</small>
+                                <strong>Database & Flask APIs</strong><br>
+                                <small style="color: var(--muted-text);">SQL Queries, ORM & RESTful Services</small>
                             </td>
                             <td>2.5 Months</td>
                             <td><span class="badge-status badge-offline">Offline Campus</span></td>
                             <td>Basic Python Syntax</td>
-                            <td>
-                                <a href="register.html" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.85rem;"><i class="fa-solid fa-pen"></i> Register Now</a>
+                            <td style="display: flex; gap: 8px; align-items: center;">
+                                <a href="register.html" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.825rem;"><i class="fa-solid fa-pen"></i> Register</a>
+                                <button onclick="downloadSyllabus('Database & Flask APIs')" class="btn btn-outline-hero" style="padding: 6px 12px; font-size: 0.825rem;" title="Download PDF Syllabus"><i class="fa-solid fa-file-pdf"></i> PDF</button>
                             </td>
                         </tr>
                     </tbody>
@@ -128,59 +142,109 @@
             </div>
         </section>
 
-        <!-- Structured Learning Path Timeline -->
-        <section style="background: var(--bg-light); border-radius: var(--radius-lg); padding: 50px 30px; margin-top: 20px;">
+        <!-- Interactive Fee Estimator & Schedule Calculator -->
+        <section>
             <div class="section-title-wrap">
-                <span class="section-subtitle">Roadmap to Success</span>
-                <h2 class="section-title">Python FullStack Learning Path</h2>
-                <p class="section-desc">A structured step-by-step progression designed to take you from foundational syntax to full application deployment.</p>
+                <span class="section-subtitle">Tuition Calculator</span>
+                <h2 class="section-title">Interactive Fee Estimator</h2>
+                <p class="section-desc">Calculate estimated tuition fee and next batch start date based on your track choice.</p>
             </div>
 
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-icon">1</div>
-                    <div class="timeline-content">
-                        <h4>HTML5 & Semantic Web Structure</h4>
-                        <p>Learn semantic tags, forms, tables, accessibility standards, audio/video media embeds, and SEO meta tags.</p>
+            <div class="calc-card">
+                <form id="feeCalcForm" onsubmit="event.preventDefault();">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="calcTrack"><i class="fa-solid fa-graduation-cap"></i> Select Program Track</label>
+                            <select id="calcTrack" class="form-control">
+                                <option value="fullstack">Python FullStack Engineering (6 Months)</option>
+                                <option value="frontend">Frontend Web Architecture (3 Months)</option>
+                                <option value="backend">Database & Flask APIs (2.5 Months)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="calcMode"><i class="fa-solid fa-laptop"></i> Training Mode</label>
+                            <select id="calcMode" class="form-control">
+                                <option value="offline">On-Campus (Agiripalli)</option>
+                                <option value="online">Online Live (10% Discount)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="calcType"><i class="fa-solid fa-id-card"></i> Student Student Category</label>
+                        <select id="calcType" class="form-control">
+                            <option value="nriit">NRIIT Enrolled Student (20% Scholarship)</option>
+                            <option value="external">External / Industry Applicant</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-result-box">
+                        <div style="font-size: 0.9rem; color: var(--muted-text); margin-bottom: 4px;">Estimated Course Fee:</div>
+                        <div id="calcPriceDisplay" class="calc-price">₹20,000</div>
+                        <p id="calcBatchDisplay" style="color: var(--dark-text); font-weight: 700; font-size: 0.925rem; margin-top: 8px;">Next Batch: 1st & 15th of Every Month (Campus)</p>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="register.html" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i> Proceed to Online Registration</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Detailed Syllabus Accordions -->
+        <section>
+            <div class="section-title-wrap">
+                <span class="section-subtitle">Detailed Curriculum</span>
+                <h2 class="section-title">Module Breakdown</h2>
+                <p class="section-desc">Click on any module to inspect learning outcomes and project deliverables.</p>
+            </div>
+
+            <div class="accordion-group">
+                <div class="accordion-item active">
+                    <div class="accordion-header">
+                        <span><i class="fa-solid fa-cubes" style="color: var(--primary);"></i> Module 1: Web Foundation (HTML5, CSS3, JS ES6+)</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        Semantic HTML structure, modern CSS Flexbox & Grid, responsive layout design, JavaScript DOM manipulation, event listeners, async/await, and REST API integration.
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-icon">2</div>
-                    <div class="timeline-content">
-                        <h4>CSS3 Styling & Responsive Design</h4>
-                        <p>Master CSS box model, Flexbox, Grid, custom styling properties, responsive media queries, and UI design tokens.</p>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span><i class="fa-brands fa-python" style="color: var(--primary);"></i> Module 2: Python Backend Engineering & Flask</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        Python core syntax, Object-Oriented Programming (OOP), Flask routing, Jinja2 template rendering, request validation, authentication tokens, and RESTful API development.
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-icon">3</div>
-                    <div class="timeline-content">
-                        <h4>Modern JavaScript (ES6+)</h4>
-                        <p>Explore variables, arrow functions, DOM manipulation, event listeners, promises, async/await, and API integration.</p>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span><i class="fa-solid fa-database" style="color: var(--primary);"></i> Module 3: Relational Databases & SQL Queries</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        MySQL relational schema design, DDL/DML queries, table joins, indexing, transaction management, Object-Relational Mapping (ORM), and database migration.
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-icon">4</div>
-                    <div class="timeline-content">
-                        <h4>Python Backend & Flask Framework</h4>
-                        <p>Build robust backend servers, HTTP routing, Jinja template rendering, request handling, sessions, and REST endpoints.</p>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span><i class="fa-solid fa-rocket" style="color: var(--primary);"></i> Module 4: Capstone FullStack Deployment</span>
+                        <i class="fa-solid fa-chevron-down"></i>
                     </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-icon">5</div>
-                    <div class="timeline-content">
-                        <h4>Relational Databases & Deployment</h4>
-                        <p>Master SQL database queries, CRUD operations, Git version control, and production application hosting.</p>
+                    <div class="accordion-body">
+                        Git version control, GitHub team workflows, continuous integration, production environment setup, cloud hosting deployment, and live placement mock interviews.
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Main Footer -->
+    <!-- Main Light Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
@@ -189,7 +253,7 @@
                         <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo" style="height: 30px; background: white; padding: 2px 4px; border-radius: 4px;">
                         NRIIT LMS Portal
                     </h4>
-                    <p>NRI Institute of Technology is dedicated to delivering high quality technical education, hands-on programming bootcamps, and career placement services.</p>
+                    <p>Dr. RVR & NRI Institute of Technology Deemed to be University delivers high-quality technical education, hands-on programming bootcamps, and career placement services.</p>
                     <div class="social-links">
                         <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -202,7 +266,7 @@
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
-                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About NRIIT</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
                         <li><a href="courses.html"><i class="fa-solid fa-chevron-right"></i> Courses Offered</a></li>
                         <li><a href="trainers.html"><i class="fa-solid fa-chevron-right"></i> Faculty & Trainers</a></li>
                         <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
@@ -210,20 +274,19 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Student Services</h4>
+                    <h4>Student Portal</h4>
                     <ul class="footer-links">
-                        <li><a href="login.html"><i class="fa-solid fa-chevron-right"></i> LMS Student Login</a></li>
-                        <li><a href="register.html"><i class="fa-solid fa-chevron-right"></i> New Registration</a></li>
-                        <li><a href="courses.html"><i class="fa-solid fa-chevron-right"></i> Placement Assistance</a></li>
-                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Campus Tour</a></li>
+                        <li><a href="login.html"><i class="fa-solid fa-chevron-right"></i> Student Login</a></li>
+                        <li><a href="register.html"><i class="fa-solid fa-chevron-right"></i> Online Registration</a></li>
+                        <li><a href="courses.html"><i class="fa-solid fa-chevron-right"></i> Learning Path</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Campus Info</h4>
+                    <h4>Campus Location</h4>
                     <div class="footer-contact-item">
                         <i class="fa-solid fa-location-dot"></i>
-                        <span>NRI Institute of Technology, Pothavarappadu, Agiripalli, Eluru District, Andhra Pradesh.</span>
+                        <span>Pothavarappadu, Agiripalli, Eluru District, Andhra Pradesh.</span>
                     </div>
                     <div class="footer-contact-item">
                         <i class="fa-solid fa-envelope"></i>
@@ -239,17 +302,11 @@
 
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 NRIIT Learning Management System. All Rights Reserved.</p>
-                <p>Designed with <i class="fa-solid fa-heart" style="color: #ef4444;"></i> for NRIIT Students</p>
+                <p>&copy; 2026 Dr. RVR & NRI Institute of Technology Deemed to be University. All Rights Reserved.</p>
+                <p>Designed with <i class="fa-solid fa-heart" style="color: #ea580c;"></i> for NRIIT Engineering Students</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('mobileToggle').addEventListener('click', function() {
-            document.getElementById('mainNav').classList.toggle('show');
-        });
-    </script>
 </body>
 
 </html>

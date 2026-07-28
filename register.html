@@ -4,35 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NRIIT Learning Management System | Student Registration</title>
+    <title>NRIIT LMS | Student Registration</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
-    <!-- Top Announcement & Contact Bar -->
-    <div class="top-bar">
+    <!-- Top Announcement Ticker Bar -->
+    <div class="top-ticker-bar">
         <div class="container">
-            <div class="top-info">
-                <span><i class="fa-solid fa-graduation-cap"></i> NRI Institute of Technology - Approved by AICTE</span>
-                <span><i class="fa-solid fa-envelope"></i> info@nriit.edu</span>
-                <span><i class="fa-solid fa-phone"></i> +91 9876543210</span>
+            <div class="ticker-items">
+                <span class="ticker-item"><i class="fa-solid fa-award"></i> NAAC A+ Accredited Campus</span>
+                <span class="ticker-item"><i class="fa-solid fa-graduation-cap"></i> AICTE Approved Programs</span>
+                <span class="ticker-item"><i class="fa-solid fa-bolt"></i> 2026 Batch Admissions Open</span>
             </div>
-            <div class="top-links">
+            <div class="top-portal-links">
                 <a href="login.html"><i class="fa-solid fa-user-lock"></i> Student Portal</a>
-                <span>|</span>
                 <a href="contact.html"><i class="fa-solid fa-location-dot"></i> Agiripalli Campus</a>
             </div>
         </div>
     </div>
 
-    <!-- Main Navigation Header -->
+    <!-- Navigation Header -->
     <header class="main-header">
         <div class="navbar-container">
             <a href="index.html" class="brand-logo">
                 <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo">
                 <div class="brand-text">
                     <span class="brand-title">NRIIT LMS</span>
-                    <span class="brand-subtitle">Learning Portal</span>
+                    <span class="brand-subtitle">LEARNING PORTAL</span>
                 </div>
             </a>
 
@@ -47,8 +47,11 @@
                 <a href="trainers.html"><i class="fa-solid fa-chalkboard-user"></i> Trainers</a>
                 <a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact</a>
                 <div class="nav-actions">
-                    <a href="login.html" class="btn-nav-login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
-                    <a href="register.html" class="btn-nav-register active"><i class="fa-solid fa-user-plus"></i> Register</a>
+                    <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <a href="login.html" class="btn-nav-login">Login</a>
+                    <a href="register.html" class="btn-nav-register active">Register</a>
                 </div>
             </nav>
         </div>
@@ -57,12 +60,12 @@
     <main class="auth-wrapper">
         <div class="auth-card wide">
             <div class="auth-header">
-                <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo" style="max-height: 60px; margin: 0 auto 16px;">
+                <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo" style="max-height: 56px; margin: 0 auto 16px;">
                 <h2>Student Online Registration</h2>
-                <p>Fill out the form below to enroll in NRIIT FullStack software training tracks</p>
+                <p>Enroll in NRIIT FullStack software training tracks</p>
             </div>
 
-            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Registration successful! Check your email for login credentials.');">
+            <form id="regForm">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="fullName"><i class="fa-solid fa-user"></i> Full Name</label>
@@ -129,7 +132,7 @@
         </div>
     </main>
 
-    <!-- Main Footer -->
+    <!-- Main Light Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
@@ -138,7 +141,7 @@
                         <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo" style="height: 30px; background: white; padding: 2px 4px; border-radius: 4px;">
                         NRIIT LMS Portal
                     </h4>
-                    <p>NRI Institute of Technology is dedicated to delivering high quality technical education, hands-on programming bootcamps, and career placement services.</p>
+                    <p>Dr. RVR & NRI Institute of Technology Deemed to be University delivers high-quality technical education, hands-on programming bootcamps, and career placement services.</p>
                     <div class="social-links">
                         <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -151,7 +154,7 @@
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
-                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About NRIIT</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
                         <li><a href="courses.html"><i class="fa-solid fa-chevron-right"></i> Courses Offered</a></li>
                         <li><a href="trainers.html"><i class="fa-solid fa-chevron-right"></i> Faculty & Trainers</a></li>
                         <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
@@ -159,20 +162,19 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Student Services</h4>
+                    <h4>Student Portal</h4>
                     <ul class="footer-links">
-                        <li><a href="login.html"><i class="fa-solid fa-chevron-right"></i> LMS Student Login</a></li>
-                        <li><a href="register.html"><i class="fa-solid fa-chevron-right"></i> New Registration</a></li>
-                        <li><a href="courses.html"><i class="fa-solid fa-chevron-right"></i> Placement Assistance</a></li>
-                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Campus Tour</a></li>
+                        <li><a href="login.html"><i class="fa-solid fa-chevron-right"></i> Student Login</a></li>
+                        <li><a href="register.html"><i class="fa-solid fa-chevron-right"></i> Online Registration</a></li>
+                        <li><a href="courses.html"><i class="fa-solid fa-chevron-right"></i> Learning Path</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Campus Info</h4>
+                    <h4>Campus Location</h4>
                     <div class="footer-contact-item">
                         <i class="fa-solid fa-location-dot"></i>
-                        <span>NRI Institute of Technology, Pothavarappadu, Agiripalli, Eluru District, Andhra Pradesh.</span>
+                        <span>Pothavarappadu, Agiripalli, Eluru District, Andhra Pradesh.</span>
                     </div>
                     <div class="footer-contact-item">
                         <i class="fa-solid fa-envelope"></i>
@@ -188,17 +190,11 @@
 
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 NRIIT Learning Management System. All Rights Reserved.</p>
-                <p>Designed with <i class="fa-solid fa-heart" style="color: #ef4444;"></i> for NRIIT Students</p>
+                <p>&copy; 2026 Dr. RVR & NRI Institute of Technology Deemed to be University. All Rights Reserved.</p>
+                <p>Designed with <i class="fa-solid fa-heart" style="color: #ea580c;"></i> for NRIIT Engineering Students</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('mobileToggle').addEventListener('click', function() {
-            document.getElementById('mainNav').classList.toggle('show');
-        });
-    </script>
 </body>
 
 </html>
