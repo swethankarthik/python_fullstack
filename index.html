@@ -1,484 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NRIIT LMS | Deemed to be University Learning Portal</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NRIIT Learning Management System - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-    <!-- Top Announcement Ticker Bar -->
-    <div class="top-ticker-bar">
-        <div class="container">
-            <div class="ticker-items">
-                <span class="ticker-item"><i class="fa-solid fa-award"></i> NAAC A+ Accredited Campus</span>
-                <span class="ticker-item"><i class="fa-solid fa-graduation-cap"></i> AICTE Approved Programs</span>
-                <span class="ticker-item"><i class="fa-solid fa-bolt"></i> 2026 Batch Admissions Open</span>
-            </div>
-            <div class="top-portal-links">
-                <a href="login.html"><i class="fa-solid fa-user-lock"></i> Student Portal</a>
-                <a href="contact.html"><i class="fa-solid fa-location-dot"></i> Agiripalli Campus</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Navigation Header -->
-    <header class="main-header">
-        <div class="navbar-container">
-            <a href="index.html" class="brand-logo">
-                <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo">
-                <div class="brand-text">
-                    <span class="brand-title">NRIIT LMS</span>
-                    <span class="brand-subtitle">LEARNING PORTAL</span>
-                </div>
-            </a>
-
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-            <nav class="main-nav" id="mainNav">
-                <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a>
-                <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
-                <a href="courses.html"><i class="fa-solid fa-book-open"></i> Courses</a>
-                <a href="trainers.html"><i class="fa-solid fa-chalkboard-user"></i> Trainers</a>
-                <a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact</a>
-                <div class="nav-actions">
-                    <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
-                        <i class="fa-solid fa-moon"></i>
-                    </button>
-                    <a href="login.html" class="btn-nav-login">Login</a>
-                    <a href="register.html" class="btn-nav-register">Register</a>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <!-- Masterwork Hero Section -->
-        <section class="hero-section">
-            <div class="container hero-grid">
-                <div class="hero-content">
-                    <div class="hero-badge-pill">
-                        <i class="fa-solid fa-sparkles"></i> Industry-Ready FullStack Engineering
-                    </div>
-                    <h1>Master Modern <span>Python FullStack</span> Architecture</h1>
-                    <p>
-                        Comprehensive engineering curriculum covering HTML5, CSS3, JavaScript ES6+, Flask Backend, REST APIs, SQL Databases, and Git version control under expert faculty guidance.
-                    </p>
-                    <div class="hero-btns">
-                        <a href="courses.html" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Explore Programs</a>
-                        <a href="register.html" class="btn btn-outline-hero"><i class="fa-solid fa-user-plus"></i> Apply Online</a>
-                    </div>
-                </div>
-
-                <!-- Code Window Preview Card with Interactive Sandbox -->
-                <div class="hero-card-preview">
-                    <div class="code-window-header">
-                        <div class="code-dots">
-                            <span class="code-dot red"></span>
-                            <span class="code-dot yellow"></span>
-                            <span class="code-dot green"></span>
-                        </div>
-                        <span class="code-window-title">nriit_app.py — Flask Server</span>
-                        <button id="runCodeBtn" class="btn btn-primary" style="padding: 4px 12px; font-size: 0.78rem;"><i class="fa-solid fa-play"></i> Run Code</button>
-                    </div>
-                    <div class="code-body">
-                        <div class="code-line"><span class="code-keyword">from</span> flask <span class="code-keyword">import</span> Flask, jsonify</div>
-                        <div class="code-line">app = Flask(__name__)</div>
-                        <div class="code-line">&nbsp;</div>
-                        <div class="code-line"><span class="code-comment"># NRIIT LMS Placement API</span></div>
-                        <div class="code-line">@app.route(<span class="code-str">"/api/students/placed"</span>)</div>
-                        <div class="code-line"><span class="code-keyword">def</span> <span class="code-func">get_placed_students</span>():</div>
-                        <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return</span> jsonify({</div>
-                        <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"status"</span>: <span class="code-str">"success"</span>,</div>
-                        <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-str">"placements"</span>: <span class="code-str">"98%"</span></div>
-                        <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;})</div>
-
-                        <!-- Console Output Target Container -->
-                        <div id="consoleOutput" class="console-output"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Partner Corporate Placement Logos Bar -->
-        <div class="partners-bar">
-            <div class="container">
-                <div class="partners-title">Top Hiring & Corporate Placement Partners</div>
-                <div class="partners-logos">
-                    <span class="partner-tag"><i class="fa-brands fa-google" style="color: #ea580c;"></i> Google</span>
-                    <span class="partner-tag"><i class="fa-brands fa-microsoft" style="color: #ea580c;"></i> Microsoft</span>
-                    <span class="partner-tag"><i class="fa-brands fa-amazon" style="color: #ea580c;"></i> Amazon</span>
-                    <span class="partner-tag"><i class="fa-solid fa-building" style="color: #ea580c;"></i> TCS</span>
-                    <span class="partner-tag"><i class="fa-solid fa-network-wired" style="color: #ea580c;"></i> Infosys</span>
-                    <span class="partner-tag"><i class="fa-solid fa-laptop-code" style="color: #ea580c;"></i> Wipro</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Why Choose Us -->
-        <section class="container">
-            <div class="section-title-wrap">
-                <span class="section-subtitle">Why NRIIT</span>
-                <h2 class="section-title">Built for Real-World Tech Engineering</h2>
-                <p class="section-desc">Our curriculum focuses on hands-on practical skills valued by global technology firms.</p>
-            </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fa-solid fa-user-tie"></i>
-                    </div>
-                    <h3>Expert Mentorship</h3>
-                    <p>Learn directly from industry lead developers with 4+ years of real-world software engineering experience.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fa-solid fa-laptop-code"></i>
-                    </div>
-                    <h3>Live FullStack Projects</h3>
-                    <p>Build enterprise full-stack web applications with real SQL databases, REST authentication, and cloud deployment.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fa-solid fa-briefcase"></i>
-                    </div>
-                    <h3>Placement Cell Support</h3>
-                    <p>Dedicated career guidance cell offering resume building, mock interviews, and referral drives with corporate partners.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Programs with Instant Search & Category Filter -->
-        <section style="background-color: var(--bg-subtle); border-top: 1px solid var(--primary-border); border-bottom: 1px solid var(--primary-border);">
-            <div class="container">
-                <div class="section-title-wrap">
-                    <span class="section-subtitle">Academic Programs</span>
-                    <h2 class="section-title">Featured FullStack Courses</h2>
-                    <p class="section-desc">Structured learning tracks designed to turn beginners into job-ready software engineers.</p>
-                </div>
-
-                <!-- Instant Search Input & Filter Tabs Wrap -->
-                <div class="filter-search-wrap">
-                    <div class="search-box">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" id="courseSearchInput" class="form-control" placeholder="Search courses by keyword (e.g. Python, Flask, SQL, HTML)...">
-                    </div>
-
-                    <div class="filter-tabs">
-                        <button class="filter-btn active" data-filter="all">All Tracks</button>
-                        <button class="filter-btn" data-filter="fullstack">FullStack</button>
-                        <button class="filter-btn" data-filter="frontend">Frontend</button>
-                        <button class="filter-btn" data-filter="backend">Backend & DB</button>
-                    </div>
-                </div>
-
-                <div class="courses-grid">
-                    <div class="course-card" data-category="fullstack">
-                        <div class="course-badge-wrap">
-                            <span class="course-category-badge">Flagship Program</span>
-                            <h3>Python FullStack Engineering</h3>
-                            <div class="course-meta-top">
-                                <span><i class="fa-regular fa-clock"></i> 6 Months Track</span>
-                                <span><i class="fa-solid fa-user-graduate"></i> All Skill Levels</span>
-                            </div>
-                        </div>
-                        <div class="course-body">
-                            <p>Master Python syntax, HTML5, CSS3, JavaScript ES6+, SQL relational databases, Flask framework, and Git version control.</p>
-                            <div class="course-tags">
-                                <span class="tag">HTML5 & CSS3</span>
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">Python</span>
-                                <span class="tag">Flask</span>
-                                <span class="tag">MySQL</span>
-                            </div>
-                            <div class="course-footer">
-                                <span class="course-price">Offline & Online</span>
-                                <a href="courses.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.875rem;"><i class="fa-solid fa-arrow-right"></i> View Program</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="course-card" data-category="frontend">
-                        <div class="course-badge-wrap">
-                            <span class="course-category-badge">Specialization</span>
-                            <h3>Frontend Web Architecture</h3>
-                            <div class="course-meta-top">
-                                <span><i class="fa-regular fa-clock"></i> 3 Months Track</span>
-                                <span><i class="fa-solid fa-user-graduate"></i> Intermediate</span>
-                            </div>
-                        </div>
-                        <div class="course-body">
-                            <p>Deep dive into modern responsive layouts, UI/UX principles, JavaScript DOM manipulation, component architecture, and REST JSON APIs.</p>
-                            <div class="course-tags">
-                                <span class="tag">UI/UX</span>
-                                <span class="tag">Flexbox & Grid</span>
-                                <span class="tag">DOM Manipulation</span>
-                                <span class="tag">REST APIs</span>
-                            </div>
-                            <div class="course-footer">
-                                <span class="course-price">Offline Campus</span>
-                                <a href="courses.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.875rem;"><i class="fa-solid fa-arrow-right"></i> View Program</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="course-card" data-category="backend">
-                        <div class="course-badge-wrap">
-                            <span class="course-category-badge">Backend Module</span>
-                            <h3>Database & Flask APIs</h3>
-                            <div class="course-meta-top">
-                                <span><i class="fa-regular fa-clock"></i> 2.5 Months Track</span>
-                                <span><i class="fa-solid fa-user-graduate"></i> Intermediate</span>
-                            </div>
-                        </div>
-                        <div class="course-body">
-                            <p>Master relational database schema design, complex SQL queries, Python ORM, and RESTful web service architecture.</p>
-                            <div class="course-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Flask</span>
-                                <span class="tag">SQL Relational</span>
-                                <span class="tag">REST API</span>
-                            </div>
-                            <div class="course-footer">
-                                <span class="course-price">Offline Campus</span>
-                                <a href="courses.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.875rem;"><i class="fa-solid fa-arrow-right"></i> View Program</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Student Capstone Projects Showcase -->
-        <section class="container">
-            <div class="section-title-wrap">
-                <span class="section-subtitle">Portfolio Showcase</span>
-                <h2 class="section-title">Student Capstone Projects</h2>
-                <p class="section-desc">Explore full-stack applications engineered by NRIIT students during bootcamps.</p>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h4>E-Commerce REST API Engine</h4>
-                    <span class="project-author"><i class="fa-solid fa-code"></i> Built by Batch 2025 FullStack Team</span>
-                    <p>Features JWT user authentication, MySQL relational database schemas, Flask REST API endpoints, and payment gateway integration.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/SriramMurugesan" target="_blank" class="btn btn-outline-hero" style="padding: 6px 14px; font-size: 0.825rem;"><i class="fa-brands fa-github"></i> GitHub Repo</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h4>University Attendance Portal</h4>
-                    <span class="project-author"><i class="fa-solid fa-code"></i> Built by Batch 2025 Web Architecture Team</span>
-                    <p>Responsive dashboard with JavaScript DOM manipulation, HTML5 forms, real-time analytics charts, and role-based student access.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/SriramMurugesan" target="_blank" class="btn btn-outline-hero" style="padding: 6px 14px; font-size: 0.825rem;"><i class="fa-brands fa-github"></i> GitHub Repo</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Alumni Success Stories & Testimonials -->
-        <section style="background-color: var(--bg-subtle); border-top: 1px solid var(--primary-border); border-bottom: 1px solid var(--primary-border);">
-            <div class="container">
-                <div class="section-title-wrap">
-                    <span class="section-subtitle">Student Success</span>
-                    <h2 class="section-title">Alumni Reviews & Placements</h2>
-                    <p class="section-desc">Hear what NRIIT engineering graduates say about their training and career placements.</p>
-                </div>
-
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Student Ananya" class="testimonial-avatar">
-                            <div class="testimonial-info">
-                                <h4>Ananya Sharma</h4>
-                                <p>Placed at TCS — 7.5 LPA</p>
-                            </div>
-                        </div>
-                        <div class="star-rating">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="testimonial-quote">"The Python FullStack track at NRIIT gave me the exact practical knowledge needed to crack corporate technical interviews with confidence."</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Student Karthik" class="testimonial-avatar">
-                            <div class="testimonial-info">
-                                <h4>Karthik Varma</h4>
-                                <p>Placed at Infosys — 6.8 LPA</p>
-                            </div>
-                        </div>
-                        <div class="star-rating">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="testimonial-quote">"Mr. Sriram's hands-on mentor support on Flask and SQL databases made backend engineering crystal clear. Highly recommended!"</p>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Student Divya" class="testimonial-avatar">
-                            <div class="testimonial-info">
-                                <h4>Divya Sri</h4>
-                                <p>Placed at Wipro — 6.5 LPA</p>
-                            </div>
-                        </div>
-                        <div class="star-rating">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="testimonial-quote">"Building live full-stack projects in the bootcamp gave me a strong portfolio that recruiters loved."</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Frequently Asked Questions (FAQ) Accordion -->
-        <section class="container">
-            <div class="section-title-wrap">
-                <span class="section-subtitle">Got Questions?</span>
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-desc">Find quick answers to common queries regarding NRIIT LMS training programs.</p>
-            </div>
-
-            <div class="accordion-group">
-                <div class="accordion-item active">
-                    <div class="accordion-header">
-                        <span><i class="fa-solid fa-circle-question" style="color: var(--primary);"></i> What are the eligibility criteria for the Python FullStack track?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-body">
-                        Anyone with basic computer operational skills can join. No prior coding experience is mandatory, as the curriculum starts from HTML5, CSS3, and foundational Python.
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span><i class="fa-solid fa-circle-question" style="color: var(--primary);"></i> Is placement assistance guaranteed after course completion?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-body">
-                        Yes! Our dedicated Placement Cell provides resume building, mock technical interviews, profile optimization, and direct referral drives with 100+ hiring partners.
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span><i class="fa-solid fa-circle-question" style="color: var(--primary);"></i> Can I attend classes online or hybrid?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-body">
-                        We offer both on-campus classroom sessions at Agiripalli and live interactive online sessions with recorded access on the student portal.
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span><i class="fa-solid fa-circle-question" style="color: var(--primary);"></i> Will I receive an official University certificate?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-body">
-                        Yes, upon successful completion of the course track and capstone project, students receive an official Dr. RVR & NRI Institute of Technology Certificate.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Placement Stats Bar -->
-        <div class="container">
-            <div class="stats-section">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <h3>5000+</h3>
-                        <p>Students Trained</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>98%</h3>
-                        <p>Placement Success Rate</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>100+</h3>
-                        <p>Hiring Corporate Partners</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>15+</h3>
-                        <p>Live Projects Built</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- Main Light Footer -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4 style="display: flex; align-items: center; gap: 8px;">
-                        <img src="https://rvrnriuniversity.edu.in/wp-content/uploads/2026/01/NRI-LOGO-FINAL.png" alt="NRIIT Logo" style="height: 30px; background: white; padding: 2px 4px; border-radius: 4px;">
-                        NRIIT LMS Portal
-                    </h4>
-                    <p>Dr. RVR & NRI Institute of Technology Deemed to be University delivers high-quality technical education, hands-on programming bootcamps, and career placement services.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
-                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
-                        <li><a href="courses.html"><i class="fa-solid fa-chevron-right"></i> Courses Offered</a></li>
-                        <li><a href="trainers.html"><i class="fa-solid fa-chevron-right"></i> Faculty & Trainers</a></li>
-                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Student Portal</h4>
-                    <ul class="footer-links">
-                        <li><a href="login.html"><i class="fa-solid fa-chevron-right"></i> Student Login</a></li>
-                        <li><a href="register.html"><i class="fa-solid fa-chevron-right"></i> Online Registration</a></li>
-                        <li><a href="courses.html"><i class="fa-solid fa-chevron-right"></i> Learning Path</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Campus Location</h4>
-                    <div class="footer-contact-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>Pothavarappadu, Agiripalli, Eluru District, Andhra Pradesh.</span>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>info@nriit.edu</span>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>+91 9876543210</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2026 Dr. RVR & NRI Institute of Technology Deemed to be University. All Rights Reserved.</p>
-                <p>Designed with <i class="fa-solid fa-heart" style="color: #ea580c;"></i> for NRIIT Engineering Students</p>
-            </div>
-        </div>
-    </footer>
+  <header>
+    <h1>NRIIT Learning Management</h1>
+    <p>Learn &bull; Practice &bull; Get Placed</p>
+    <nav>
+      <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+      <a href="courses.html"><i class="fa-solid fa-graduation-cap"></i> Courses</a>
+      <a href="trainers.html"><i class="fa-solid fa-user-tie"></i> Trainers</a>
+      <a href="register.html"><i class="fa-solid fa-user-plus"></i> Register</a>
+      <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+      <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2 id="welcome">Welcome to NRIIT Learning Management System</h2>
+      <p>
+        The NRIIT Management System helps students explore courses, register online, learn from experienced trainers, and track their learning journey.
+      </p>
+      <p id="message">Learning never stops</p>
+      <img src="image/banner.jpg" alt="LMS Banner" class="banner">
+      <div style="margin-top: 1rem;">
+        <button onclick="showmessage()"><i class="fa-solid fa-bell"></i> Click Me</button>
+        <button onclick="changeHeading()"><i class="fa-solid fa-pen"></i> Change Heading</button>
+        <button id="btnGreeting"><i class="fa-solid fa-hand-wave"></i> Welcome</button>
+      </div>
+    </section>
+    <section>
+      <h2>Why Choose NRIIT?</h2>
+      <ul style="list-style: none; padding-left: 0;">
+        <li style="margin-bottom: 1rem;"><i class="fa-solid fa-circle-check" style="color: var(--primary); margin-right: 8px;"></i> <strong>Experienced Trainers:</strong> Learn directly from industry experts with real-world experience.</li>
+        <li style="margin-bottom: 1rem;"><i class="fa-solid fa-circle-check" style="color: var(--primary); margin-right: 8px;"></i> <strong>Industry Projects:</strong> Build portfolio-ready fullstack applications.</li>
+        <li style="margin-bottom: 1rem;"><i class="fa-solid fa-circle-check" style="color: var(--primary); margin-right: 8px;"></i> <strong>Placement Assistance:</strong> Comprehensive career guidance, mock interviews, and placement drives.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Popular Courses</h2>
+      <article>
+        <h3><i class="fa-brands fa-python" style="color: #3776ab; margin-right: 8px;"></i> Python FullStack</h3>
+        <p>Master end-to-end web development with HTML, CSS, JavaScript, SQL, and Flask. Build scalable web apps from scratch.</p>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 NRIIT Learning Management System. All Rights Reserved.</p>
+    <p><i class="fa-solid fa-envelope"></i> Email: info@nriit.edu | <i class="fa-solid fa-phone"></i> Phone: +91 9876543210</p>
+    <p style="margin-top: 1rem;">Follow Us:</p>
+    <p>
+      <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a> |
+      <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a> |
+      <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+    </p>
+  </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
