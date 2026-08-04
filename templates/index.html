@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>Home - NRIIT Learning Management</title>
+</head>
+
+<body>
+  <header>
+    <h1>NRIIT Learning Management System</h1>
+    <p>Learn &bull; Practice &bull; Get Placed</p>
+    <nav>
+      <a href="{{ url_for('home') }}" class="active">Home</a>
+      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('courses') }}">Courses</a>
+      <a href="{{ url_for('trainers') }}">Trainers</a>
+      <a href="{{ url_for('register') }}">Register</a>
+      <a href="{{ url_for('login') }}">Login</a>
+      <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2 id="welcome">Welcome to NRIIT Learning Management System</h2>
+      <p>
+        The NRIIT Management System helps students explore courses, register online, learn from experienced trainers, and track their learning journey.
+      </p>
+      <p id="message">Learning never stops</p>
+      <div>
+        <img src="{{ url_for('static', filename='image/banner.jpg') }}" alt="LMS Banner" class="banner">
+      </div>
+      <div style="margin-top: 1rem;">
+        <button onclick="showmessage()">Click Me</button>
+        <button onclick="changeHeading()">Change Heading</button>
+        <button id="btnGreeting">Welcome</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why Choose NRIIT?</h2>
+      <ul>
+        <li>Experienced & Certified Industry Trainers</li>
+        <li>Real-world Hands-on Projects</li>
+        <li>Dedicated Placement & Career Assistance</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Popular Courses</h2>
+      <article>
+        <h3>Python FullStack Development</h3>
+        <p>Master HTML, CSS, JavaScript, SQL, Python, and Flask framework.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 NRIIT Learning Management System. All Rights Reserved.</p>
+    <p>Email: info@nriit.edu | Phone: +91 9876543210</p>
+    <p>Follow Us:
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">LinkedIn</a>
+    </p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
